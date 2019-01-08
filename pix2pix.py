@@ -2,6 +2,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+from comet_ml import Experiment
 import tensorflow as tf
 import numpy as np
 import argparse
@@ -12,7 +13,6 @@ import random
 import collections
 import math
 import time
-from comet_ml import Experiment
 
 experiment = Experiment(api_key="os.environ['COMETML_APIKEY']",
                         project_name="os.environ['COMETML_PROJECT']", workspace="os.environ['COMETML_WORKSPACE']")
