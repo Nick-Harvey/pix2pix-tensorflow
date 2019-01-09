@@ -2,6 +2,8 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 from comet_ml import Experiment
+experiment = Experiment(api_key="os.environ['COMETML_APIKEY']",
+                        project_name="os.environ['COMETML_PROJECT']", workspace="os.environ['COMETML_WORKSPACE']")
 
 import tensorflow as tf
 import numpy as np
@@ -13,9 +15,6 @@ import random
 import collections
 import math
 import time
-
-experiment = Experiment(api_key="os.environ['COMETML_APIKEY']",
-                        project_name="os.environ['COMETML_PROJECT']", workspace="os.environ['COMETML_WORKSPACE']")
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--input_dir", help="path to folder containing images")
